@@ -28,21 +28,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submitOrder(View view) {
-        int price = quantity * 5;
+        int price = calculatePrice();
         String priceMessage = price + " dollars for " + quantity + " cups of coffee. Pay up.";
         priceMessage = priceMessage + "\n Thank You!";
         displayMessage(priceMessage);
-
-        calculatePrice(quantity, 10);
     }
 
     /**
      * Calculates the price of the order.
      *
-     * @param quantity is the number of cups of coffee ordered
+     * @return total price
      */
-    private void calculatePrice(int quantity, int pricePerCup) {
-        int price = quantity * pricePerCup;
+    private int calculatePrice() {
+        int price = quantity * 5;
+        return price;
     }
 
     private void displayQuantity(int numberOfCoffees) {
