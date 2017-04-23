@@ -32,11 +32,22 @@ public class MainActivity extends AppCompatActivity {
         String priceMessage = price + " dollars for " + quantity + " cups of coffee. Pay up.";
         priceMessage = priceMessage + "\n Thank You!";
         displayMessage(priceMessage);
+
+        calculatePrice(quantity, 10);
     }
 
-    private void displayQuantity(int number) {
+    /**
+     * Calculates the price of the order.
+     *
+     * @param quantity is the number of cups of coffee ordered
+     */
+    private void calculatePrice(int quantity, int pricePerCup) {
+        int price = quantity * pricePerCup;
+    }
+
+    private void displayQuantity(int numberOfCoffees) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
-        quantityTextView.setText("" + number);
+        quantityTextView.setText("" + numberOfCoffees);
     }
 
     private void displayPrice(int number) {
