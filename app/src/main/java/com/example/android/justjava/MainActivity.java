@@ -15,8 +15,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submitOrder(View view) {
-        display(2);
-        displayPrice(2*5);
+        int quantity = 2;
+        display(quantity);
+        displayPrice(quantity * 5);
     }
 
     private void display(int number){
