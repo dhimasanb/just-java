@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="0"
+        android:text="1"
         android:textSize="16sp" />
 
     <Button
@@ -47,7 +47,7 @@
         android:id="@+id/price_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="$0"
+        android:text="$5.00"
         android:textSize="16sp" />
 
     <Button
