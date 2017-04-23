@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submitOrder(View view) {
-        display(1);
+        display(18*3+4/(2+2)-1);
     }
 
     private void display(int number){
