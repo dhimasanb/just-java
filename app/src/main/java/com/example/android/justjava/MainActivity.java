@@ -28,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submitOrder(View view) {
-        String priceMessage = "Free";
+        int price = quantity * 5;
+        String priceMessage = price + "dollars for" + quantity + "cups of coffee. Pay up.";
         displayMessage(priceMessage);
     }
 
