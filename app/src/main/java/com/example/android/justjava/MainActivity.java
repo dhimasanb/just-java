@@ -10,8 +10,6 @@ import android.widget.TextView;
 
 import java.text.NumberFormat;
 
-import static android.R.attr.name;
-
 public class MainActivity extends AppCompatActivity {
 
     int quantity = 0;
@@ -43,8 +41,9 @@ public class MainActivity extends AppCompatActivity {
         CheckBox chocolateCheckBox = (CheckBox) findViewById(R.id.chocolate);
         boolean hasChocolate = chocolateCheckBox.isChecked();
 
-        int price = calculatePrice();
-        displayMessage(createOrderSummary(price, haswhippedCream, hasChocolate));
+        int price = calculatePrice(haswhippedCream, hasChocolate);
+        String priceMessage = createOrderSummary(name, price, haswhippedCream, hasChocolate);
+        displayMessage(priceMessage);
     }
 
     /**
@@ -52,8 +51,18 @@ public class MainActivity extends AppCompatActivity {
      *
      * @return total price
      */
-    private int calculatePrice() {
-        return quantity * 5;
+    private int calculatePrice(boolean addWhippedCream, boolean addChocolate ) {
+        int basePrice = 5;
+
+        if (addWhippedCream) {
+            basePrice = basePrice + 1;
+        }
+
+        if (addChocolate) {
+            basePrice = basePrice + 2;
+        }
+
+        return quantity * basePrice;
     }
 
     private String createOrderSummary(String name, int price, boolean addWhippedCream, boolean addChocolate) {
