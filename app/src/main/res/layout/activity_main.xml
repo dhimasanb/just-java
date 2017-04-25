@@ -20,12 +20,8 @@
             android:inputType="text" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:paddingTop="16dp"
             android:text="@string/toppings"
-            android:textAllCaps="true" />
+            style="@style/HeaderTextStyle" />
 
         <CheckBox
             android:id="@+id/whipped_cream_checkbox"
@@ -44,13 +40,8 @@
             android:textSize="16sp"/>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:paddingTop="16dp"
             android:text="Quantity"
-            android:textAllCaps="true" />
+            style="@style/HeaderTextStyle" />
 
         <LinearLayout
             android:layout_width="match_parent"
